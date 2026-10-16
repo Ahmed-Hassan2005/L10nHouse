@@ -1,0 +1,6 @@
+@media screen {
+    body{
+        min-height: 120vh;
+        background: #09c;
+    }
+}

@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+@mixin mobile{
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (max-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin large-desktop{
+    @media (max-width: $large-desktop) {
+        @content;
+    }
+}
+
+@mixin flex-box($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin position($position: relative, $top: initial, $left: initial, $bottom: initial, $right: initial){
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin dimensions($width: initial, $height: initial, $padding: initial, $margin: initial){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+}

@@ -1,0 +1,80 @@
+@use "../../sass/abstracts/mixins" as *;
+@use "../../sass/abstracts/variables" as *;
+
+
+#WhyUs{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    padding: 100px 0;
+
+    h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: var(--my-orange);
+
+        &::after{
+            content: '';
+            display: block;
+            width: 50px;
+            height: 5px;
+            background-color: var(--my-orange);
+            margin: 20px auto;
+            translate: 0 -10px;
+            transition-duration: 0.3s;
+
+        }//end ::after
+
+    }//end h1
+    
+    &:hover h1::after{
+        width: 100px;
+
+    }//end hover
+    
+    .container{
+
+        .row{
+            
+            [class*=col]{
+                height: 450px;
+                margin: 10px auto;
+
+                .whyUs-card{
+                    max-width: 350px;
+                    border-radius: 10px;
+                    background-color: var(--my-orange);
+
+                    .slidable{
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 10px;
+                        transition-duration: 0.5s;
+                        
+                        .title{
+                            h4{
+                                font-weight: 700;
+                            }
+
+                        }//end title
+
+                    }//end slidable
+
+                    &:hover .slidable{
+                        translate: -10px 10px;
+
+                    }//end hover
+
+                }//end whyUs-card
+
+            }//end col
+            
+        }//end row
+        
+    }//end container
+    
+}//end WhyUs

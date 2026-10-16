@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>L10N House</title>
+    <link rel="icon" href="./assets/imgs/l10n-house.png">
+
+    <!--------------------------------------meta data------------------------------------------->
+
+    <!--Allows Arabic, English, symbols and emojis-->
+    <meta charset="UTF-8">
+
+    <!--Allows the website to be responsive on different devices, Tells browser to match screen width, Sets initial zoom level-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Appears in Google search results, Helps SEO ranking-->
+    <meta name="description" content="Learn web development with practical examples.">
+
+    <!--Tells search engines who created the page-->
+    <meta name="author" content="Ahmed Hassan">
+
+    <!--Used when sharing on social media like facebook, linkedin, whatsapp, etc-->
+    <meta property="og:title" content="My Website">
+    <meta property="og:description" content="Best site ever">
+    <meta property="og:image" content="image.jpg">
+
+    <!--------------------------------------CSS------------------------------------------->
+
+    <link rel="stylesheet" href="./dist/css/plugins/bootstrap.css">
+    <link rel="stylesheet" href="./dist/css/plugins/animate.css">
+    <link rel="stylesheet" href="./dist/css/plugins/icons/css/icons.css">
+    <link rel="stylesheet" href="./dist/css/plugins/fonts.css">
+    <link rel="stylesheet" href="./dist/css/plugins/swiper.css">
+    <link rel="stylesheet" href="./dist/css/animation.css">
+    <link rel="stylesheet" href="./dist/css/global.css">
+    <link rel="stylesheet" href="./dist/css/sass.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./dist/css/responsive.css">
+</head>
+
+<body>
+
+    <!-----------------------------------------nav----------------------------------------->
+    <nav>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-2">
+                    <img src="./assets/imgs/l10n-house.png" alt="">
+                </div>
+
+                <div class="col-10">
+
+                    <ul class="links none">
+
+                        <li><a onclick="scrollTo_(positions.home, 600)" class="active">Home</a></li>
+                        <li><a onclick="scrollTo_(positions.about, 600)">About Us</a></li>
+                        <li><a onclick="scrollTo_(positions.service, 600)">Services</a></li>
+                        <li><a onclick="scrollTo_(positions.whyUs, 600)">Why Us?</a></li>
+                        <li><a onclick="scrollTo_(positions.language, 600)">Language & Sectors</a></li>
+                        <li><a onclick="scrollTo_(positions.contact, 600)">Contact Us</a></li>
+                        <li><a onclick="">New Vendor</a></li>
+                        <li><a onclick="">Login</a></li>
+
+                    </ul>
+
+                    <button class="nav-toggle">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+                </div><!--col-->
+
+            </div><!--row-->
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="mobile-links">
+
+                        <ul class="none">
+
+                            <li><a onclick="scrollTo_(positions.home, 600)" class="active">Home</a></li>
+                            <li><a onclick="scrollTo_(positions.about, 600)">About Us</a></li>
+                            <li><a onclick="scrollTo_(positions.service, 600)">Services</a></li>
+                            <li><a onclick="scrollTo_(positions.whyUs, 600)">Why Us?</a></li>
+                            <li><a onclick="scrollTo_(positions.language, 600)">Language & Sectors</a></li>
+                            <li><a onclick="scrollTo_(positions.contact, 600)">Contact Us</a></li>
+                            <li><a href="#Vendor">New Vendor</a></li>
+                            <li><a href="#Login">Login</a></li>
+
+                        </ul>
+
+                    </div><!--mobil-links-->
+
+                </div><!--col-->
+
+            </div><!--row-->
+
+        </div><!--container-->
+
+        <div class="arrow">
+            <i class="fas fa-long-arrow-alt-up me-2"></i>
+            <span>To Top</span>
+        </div>
+
+    </nav>
+
+    <!-----------------------------------------home----------------------------------------->
+    <header id="Home" class="vh-100">
+
+        <div class="container h-100">
+
+            <div class="row h-100">
+
+                <div class="col-6 h-100 d-flex flex-column justify-content-center align-items-start">
+                    <h1 class="mb-3">L10N House</h1>
+                    <p>will help you communicate your message</p>
+
+                    <div class="typed-word" data-words="eloquently.,Professionally.,directly to your audience."
+                        style="font-size: 20px; color: var(--my-orange);">
+
+                    </div>
+
+                    <div class="link-video d-flex align-items-center gap-2" onclick="scrollTo_(positions.video, 600)">
+
+                        <div class="icon position-relative">
+                            <div class="circle position-absolute"></div>
+                            <div class="triangle position-absolute d-flex justify-content-center align-items-center"><i
+                                    class="fa-solid fa-play"></i></div>
+                        </div>
+
+                        <span>Play Video</span>
+                    </div><!--link-video-->
+
+                </div><!--.col-4-->
+
+                <div class="col-6 h-100 d-flex justify-content-center align-items-center">
+
+                    <div class="images w-100 h-100 d-flex justify-content-center align-items-center">
+                        <img src="./assets/imgs/home/earth.png" alt="" class="wow animate__zoomIn">
+
+                    </div><!--.images-->
+
+                </div><!--.col-8-->
+
+            </div><!--.row-->
+
+        </div><!--.container-->
+
+        <div class="animation position-absolute" onclick="scrollTo_(positions.about, 600)">
+            <img src="./assets/imgs/home/arrowdown.png">
+            <img src="./assets/imgs/home/arrowdown.png">
+            <img src="./assets/imgs/home/arrowdown.png">
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="
+                    M0,0V46.29c47.79,
+                    22.2,103.59,
+                    32.17,158,28,
+                    70.36-5.37,
+                    136.33-33.31,
+                    206.8-37.5,
+                    C438.64,32.43,
+                    512.34,53.67,
+                    583,72.05,
+                    c69.27,18,
+                    138.3,24.88,
+                    209.4,13.08,
+                    36.15-6,
+                    69.85-17.84,
+                    104.45-29.34,
+                    C989.49,25,
+                    1113-14.29,
+                    1200,52.47V0Z
+                " opacity=".25" class="shape-fill" fill="#FFFFFF" fill-opacity="1" />
+            <path d="
+                    M0,0V15.81C13,
+                    36.92,
+                    27.64,56.86,
+                    47.69,72.05,
+                    99.41,111.27,
+                    165,111,
+                    224.58,91.58,
+                    c31.15-10.15,
+                    60.09-26.07,
+                    89.67-39.8,
+                    40.92-19,
+                    84.73-46,
+                    130.83-49.67,
+                    36.26-2.85,
+                    70.9,9.42,
+                    98.6,31.56,
+                    31.77,25.39,
+                    62.32,62,
+                    103.63,73,
+                    40.44,10.79,
+                    81.35-6.69,
+                    119.13-24.28,
+                    s75.16-39,
+                    116.92-43.05,
+                    c59.73-5.85,
+                    113.28,22.88,
+                    168.9,38.84,
+                    30.2,8.66,
+                    59,6.17,
+                    87.09-7.5,
+                    22.43-10.89,
+                    48-26.93,
+                    60.65-49.24V0Z
+                " opacity=".5" class="shape-fill" fill="#FFFFFF" fill-opacity="1" />
+            <path d="
+                    M0,0V5.63C149.93,
+                    59,
+                    314.09,
+                    71.32,
+                    475.83,
+                    42.57,
+                    c43-7.64,
+                    84.23-20.12,
+                    127.61-26.46,
+                    59-8.63,
+                    112.48,12.24,
+                    165.56,35.4,
+                    C827.93,77.22,
+                    886,95.24,
+                    951.2,90c86.53-7,
+                    172.46-45.71,
+                    248.8-84.81V0Z
+                " class="shape-fill" fill="#FFFFFF" fill-opacity="1" />
+        </svg>
+
+    </header><!--#Home-->
+
+    <!-----------------------------------------About----------------------------------------->
+    <div id="About">
+        <h1 class="wow animate__bounceIn">ABOUT US</h1>
+
+        <div class="container">
+
+            <div class="about-card">
+
+                <div class="about-image">
+                    <img src="./assets/imgs/about/img2.png" alt="L10N House" class="wow animate__zoomIn">
+                </div>
+
+                <div class="about-content">
+
+                    <p class="wow animate__bounceIn">
+                        Located in the heart of dynamic Egypt, L10N House is a fast-growing company fully equipped to
+                        fulfil
+                        your translation and localization requirements, whatever the size and scope of your project.
+                        Our personalized approach that reflects our passion and uncompromising commitment to every
+                        client has seen us enjoy constant and steady growth. We pride ourselves on our reputation
+                        for QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY - ensuring we deliver first-rate
+                        projects on time and on budget, every time. Our reputation is built on delivering reliable,
+                        accurate projects on time and on budget. Our 24/7 customer service allows us to solve your
+                        problems in real time with a fast turn-around. L10N House takes the stress out of the language
+                        translation and localization process by providing fast, high-quality service for every piece of
+                        communication you need translated - in any language, for any type of content.
+                    </p>
+
+                </div><!--.about-content-->
+
+            </div><!--.about-card-->
+
+        </div><!--.container-->
+
+    </div><!--#About-->
+
+    <!-----------------------------------------Service----------------------------------------->
+    <div id="Service">
+        <h1 class="wow animate__bounceIn">SERVICES</h1>
+
+        <div class="container">
+
+            <div class="row">
+
+            </div><!--.row-->
+
+            <div class="row">
+
+            </div><!--.row-->
+
+        </div><!--.container-->
+
+        <div class="popup">
+
+        </div><!--.popup-->
+
+        <div id="Video">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12">
+                        <h2 class="w-100 text-center wow animate__bounceIn">WATCH VIDEO</h2>
+
+                        <i class="fa-brands fa-youtube wow animate__bounceIn"
+                            onclick="$('#video .videoPopup').addClass('active')">
+                        </i>
+
+                    </div><!--.col-12-->
+
+                </div><!--.row-->
+
+            </div><!--.container-->
+
+            <div class="videoPopup">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <iframe src="https://www.youtube.com/embed/BMLRFrmRbKQ"
+                                title="Motion Graphics | Mister translation site" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+                            </iframe>
+
+                        </div><!--.col-12-->
+
+                    </div><!--.row-->
+
+                </div><!--.container-->
+
+            </div><!--.videoPopup-->
+
+        </div><!--#Video-->
+
+    </div><!--#Service-->
+
+    <!-----------------------------------------WhyUs----------------------------------------->
+    <div id="WhyUs">
+        <h1 class="wow animate__bounceIn">WHY US?</h1>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6"></div>
+                <div class="col-lg-4 col-md-6"></div>
+                <div class="col-lg-4 col-md-6"></div>
+
+            </div><!--.row-->
+
+        </div><!--.container-->
+
+    </div><!--#WhyUs-->
+
+    <!-----------------------------------------Language----------------------------------------->
+    <div id="Language">
+
+        <div class="part-1">
+            <h1>LANGUAGE & SECTORS</h1>
+
+            <div class="buttons">
+                <div class="button1 wow animate__backInLeft">Sectors</div>
+                <div class="button2 wow animate__backInRight">Languages</div>
+
+            </div><!--.buttons-->
+
+            <div class="sector-popup"></div>
+            <div class="language-popup"></div>
+
+        </div><!--.part-1-->
+
+        <div class="part-2">
+            <h1>SATISFIED CLIENTS</h1>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12">
+
+                        <div class="swiper photos-swiper">
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-01.jpg" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-02.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-03.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-04.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-05.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-06.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-07.jpg" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-08.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-09.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-10.png" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-11.jpg" alt="">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./assets/imgs/language/swiper-12.png" alt="">
+                                </div>
+
+                            </div>
+
+                            <!-- The dots -->
+                            <div class="swiper-pagination"></div>
+
+                        </div><!--.swiper-->
+
+                    </div><!--col-12-->
+
+                </div><!--row-->
+
+            </div><!--container-->
+        </div><!--.part-2-->
+
+    </div><!--#Language-->
+
+    <!-----------------------------------------Contact----------------------------------------->
+    <div id="Contact">
+        <h1>GET IN TOUCH</h1>
+        <p>For More information, please do not hesitate to contact us.</p>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12 col-lg-6 wow animate__backInLeft">
+
+                    <form action="" method="post">
+
+                        <div class="row">
+
+                            <div class="col-12 col-lg-6">
+                                <input autocomplete="off" type="text" placeholder="Full Name*">
+
+                            </div><!--name-->
+
+                            <div class="col-12 col-lg-6">
+                                <input autocomplete="off" type="text" placeholder="Your E-mail*">
+
+                            </div><!--email-->
+
+                            <div class="col-12">
+                                <input autocomplete="off" type="text" placeholder="Your Phone*">
+
+                            </div><!--phone-->
+
+                            <div class="col-12">
+                                <textarea autocomplete="off" name="" id="" placeholder="Your Message..." style="resize: none; height: 100px;"></textarea>
+
+                            </div><!--message-->
+
+                        </div><!--.row-->
+
+                        <button type="button">Send Message</button>
+
+                    </form><!--.form-->
+
+                </div><!--.col-->
+
+                <div class="col-12 col-lg-6 wow animate__backInRight">
+
+                    <div class="contact-info">
+
+                        <div class="contact-group">
+                            <i class="fas fa-map-marker-alt"></i>
+
+                            <div class="details">
+                                <h5>Address</h5>
+                                <p>178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
+
+                            </div>
+                            
+                        </div><!--address-->
+
+                        <div class="contact-group">
+                            <i class="fas fa-phone-alt"></i>
+
+                            <div class="details">
+                                <h5>Phone</h5>
+                                <p>(+202) 3825 0102 | (+202) 3825 0105</p>
+
+                            </div>
+
+                        </div><!--phone-->
+
+                        <div class="contact-group">
+                            <i class="fas fa-envelope"></i>
+
+                            <div class="details">
+                                <h5>E-mail</h5>
+                                <p>info@l10nhouse.com</p>
+
+                            </div>
+
+                        </div><!--email-->
+
+                        <div class="contact-group">
+                            <i class="fa-brands fa-facebook" style="color: blue;"></i>
+                            <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+                            <i class="fa-brands fa-youtube" style="color: red;"></i>
+                            
+                        </div><!--links-->
+                        
+                    </div><!--.contact-info-->
+
+                </div><!--.col-->
+
+            </div><!--.row-->
+
+        </div><!--.container-->
+
+    </div><!--#Contact-->
+
+    <!-----------------------------------------Footer----------------------------------------->
+    <footer style="background-color: #333;" class="text-center py-2 text-white">
+        &copy; 2021 <span style="color: var(--my-orange); font-weight: bold;"> SemiCode</span>, Ltd. | All Rights Reserved .
+    </footer>
+
+    <!--------------------------------------javaScript------------------------------------------->
+
+    <script src="./dist/js/plugins/bootstrap.js"></script>
+    <script src="./dist/js/plugins/jquery.js"></script>
+    <script src="./dist/js/plugins/MyMath.js"></script>
+    <script src="./dist/js/plugins/wow.js"></script>
+    <script src="./dist/js/plugins/gsap.js"></script>
+    <script src="./dist/js/plugins/swiper.js"></script>
+    <script src="./dist/js/functions.js"></script>
+    <script src="./dist/js/script.js"></script>
+</body>
+
+</html>

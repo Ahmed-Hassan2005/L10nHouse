@@ -1,0 +1,236 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+nav {
+    padding: 10px 0;
+    transition-duration: 0.5s;
+    @include position(fixed, 0, 0, initial, 0);
+    width: 100%;
+    z-index: 1000;
+
+    &.scrolled{
+        background-color: #ffffffe6;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    }// end scrolled
+
+    .container {
+
+        .row {
+
+            .col-2 {
+
+                img {
+                    width: 150px;
+                    transition-duration: 0.5s;
+
+                    @include desktop{
+                        width: 125px;
+                    }// end desktop
+
+                    @include tablet{
+                        width: 100px;
+                    }// end tablet
+
+                    @include mobile{
+                        width: 75px;
+                    }// end mobile
+
+                }// end img
+
+            }// end .col-2
+
+            .col-10{
+                @include flex-box(end , center, row);
+
+                ul {
+                    max-width: 750px;
+                    width: 100%;
+                    height: 100px;
+                    @include flex-box(space-between , center, row);
+                    transition-duration: 0.5s;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            display: block;
+                            color: $Lime;
+                            text-decoration: none;
+                            font-weight: 500;
+                            cursor: pointer;
+
+                            &::after{
+                                content: '';
+                                display: block;
+                                @include position(relative , initial, 50%, 0);
+                                transform: translate(-50% , 10px);
+                                width: 0%;
+                                height: 2px;
+                                background-color: $Orange;
+                                transition: width .5s ease;
+
+                            }// end ::after
+
+                            &:hover::after,
+                            &.active::after{
+                                width: 100%;
+                            }// end ::after
+
+                        }// end a
+
+                    }// end li
+
+                    @include laptop{
+                        display: none;
+                    }// end laptop
+                    
+                }// end ul
+                
+                .nav-toggle{
+                    @include flex-box(space-between , center, column);
+                    display: none;
+                    @include dimensions(60px , 40px , 10px 20px);
+                    border: 1px solid #333;
+                    transition-duration: 0.5s;
+                    background-color: transparent;
+                    border-radius: 5px;
+
+                    &.active{
+                        border: 1px solid $Lime;
+                    }// end .active
+                    
+                    span{
+                        display: block;
+                        width: 25px;
+                        height: 2px;
+                        border-radius: 50vw;
+                        background-color: #333;
+                        transition-duration: 0.5s;
+                    }// end span
+                    
+                    @include laptop{
+                        display: flex;
+                    }// end laptop
+
+                }// end .nav-toggle
+                
+            }// end .col-10
+            
+            .col-12{
+
+                .mobile-links{
+                    @include flex-box(center, center, column);
+                    display: none;
+                    background-color: #ffffffe6;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition-duration: 0.5s;
+                    @include dimensions(100%, 0);
+
+                    &.active{
+                        @include dimensions($height: 350px);
+                    }// end .active
+
+                    @include laptop{
+                        display: flex;
+                    }// end laptop
+            
+                    ul{
+                        width: 100%;
+                        @include flex-box(center, center, column);
+
+                        li{
+                            margin: 10px 0;
+
+                            a{
+                                @include dimensions(100px, initial);
+                                text-decoration: none;
+                                color: $Lime;
+                                margin: 10px 0;
+                                cursor: pointer;
+
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    @include position(relative , initial, 50%, 0);
+                                    transform: translate(-50%);
+                                    width: 0%;
+                                    height: 2px;
+                                    background-color: $Orange;
+                                    transition: width .5s ease;
+                                }// end ::after
+
+                                &:hover::after,
+                                &.active::after{
+                                    width: 100%;
+                                }// end ::after
+
+                            }// end a
+
+                        }// end li
+
+                    }// end ul
+
+                }// end .mobile-links
+
+            }// end .col-12
+
+        }// end .row
+        
+    }// end .container
+
+    &.scrolled .container .row .col-10 ul{
+        height: 50px;
+    }
+
+    &.scrolled .container .row .col-2 img{
+        width: 100px;
+
+        @include desktop{
+            width: 100px;
+
+        }// end desktop
+
+        @include tablet{
+            width: 75px;
+
+        }// end tablet
+
+        @include mobile{
+            width: 50px;
+
+        }// end mobile
+
+    }// end scrolled .col-2 img
+
+    .arrow{
+        @include position(fixed , 50%, initial, initial, -100px);
+        transform: translateY(-50%);
+        background: $Lime;
+        border-radius: 10px 0 0 10px;
+        padding: 5px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        transition-timing-function: linear(
+            0, 1 44.7%, 0.898 51.8%, 0.874 55.1%, 
+            0.866 58.4%, 0.888 64.3%, 1 77.4%, 
+            0.98 84.5%, 1
+        );// end transition-timing-function
+        
+        &.scrolled{
+            @include position(fixed , 50%, initial, initial, -60px);
+        }// end .scrolled
+
+        &:hover{
+            @include position(fixed , 50%, initial, initial, 0);
+        }// end :hover
+        
+        i, span{
+            color: white;
+            font-size: 15px;
+        }// end i, span
+        
+    }// end .arrow
+
+}// end nav

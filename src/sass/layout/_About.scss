@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+#About{
+    background-color: white;
+    width: 100%;
+    padding: 100px 0;
+    h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: var(--my-orange);
+        &::after{
+            content: '';
+            display: block;
+            width: 50px;
+            height: 5px;
+            background-color: var(--my-orange);
+            margin: 20px auto;
+            transition-duration: 0.3s;
+        }//end ::after
+
+    }//end h1
+
+    &:hover h1::after{
+        width: 100px;
+    }//end &:hover h1::after
+
+    .about-card {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        padding: 15px 40px 15px 35%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+        .about-image {
+            position: absolute;
+            left: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 320px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                display: block;
+            }//end img
+
+            @include laptop {
+                left: 0%;
+                width: 70%;
+                position: relative;
+                left: auto;
+                top: auto;
+                transform: none;
+                width: 80%;
+                height: 300px;
+                margin: 0 auto 25px;
+            }//end laptop
+
+        }//end .about-image
+
+        @include laptop {
+            width: 90%;
+            padding: 0 25px 30px;
+        }//end laptop
+
+    }//end .about-card
+
+}//end #About
+

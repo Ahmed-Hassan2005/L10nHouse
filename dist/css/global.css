@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-family: 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        "Segoe UI", 
+        Roboto, 
+        Helvetica Neue, 
+        Arial, 
+        "Noto Sans", 
+        sans-serif, 
+        "Apple Color Emoji", 
+        "Segoe UI Emoji", 
+        "Segoe UI Symbol", 
+        "Noto Color Emoji";
+        
+    /* to make fonts cleaner */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --my-green: #719f3d;
+    --my-orange: #ee5e00;
+}
+
+a.none {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+ul.none {
+    list-style: none !important;
+}

@@ -1,0 +1,110 @@
+@use "../../sass/abstracts/mixins" as *;
+@use "../../sass/abstracts/variables" as *;
+
+#Contact{
+    padding-block: 40px;
+    background-image: url("../../assets/imgs/contact/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    *{
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(#68b703, #305d00);
+        opacity: 0.8;
+        z-index: 1 !important;
+        pointer-events: none;
+
+    }//end ::before
+
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 20px;
+
+    }//end h1
+
+    p, h1{
+        text-align: center;
+        color: white;
+    }
+
+    .container .row>[class*=col]{
+        margin-bottom: 10px;
+    }
+
+    form{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 100%;
+
+        input, textarea{
+            width: 100%;
+            margin: 10px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+        }//end input, textarea
+
+    }//end form
+
+    button{
+        margin: 10px 0;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--my-orange);
+        color: white;
+        cursor: pointer;
+
+    }//end button
+
+    .contact-info{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+
+        *{
+            color: black;
+        }
+
+        .contact-group{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            &:not(:last-child) i{
+                margin: 0 10px;
+                color: $Orange;
+            }
+
+            &:last-child i{
+                font-size: 40px;
+                margin: 0 10px;
+            }//end :last-child i
+
+        }//end .contact-group
+
+    }//end .contact-info
+
+}//end Contact
